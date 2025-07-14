@@ -1,0 +1,106 @@
+body{
+  font-family: Arial;
+	z-index: 1;
+    background-color:rgb(141, 183, 141)
+	
+}
+
+.container{
+  display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30pt;
+    color: #f0f0f0;
+    text-shadow: 0 0 4px #000000, 0 0 10px rgb(255, 226, 232);
+}
+
+.mcontainer{
+    max-width: 1500px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+ 
+}
+#banner{
+  flex:1;
+  color:#d5f7d4;
+  height:600pt;
+  padding:10px;
+  justify-content:center;
+  align-items:center;
+  background-image: url('https://www.ghibli.jp/gallery/laputa049.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+	z-index:2;
+}
+
+#bannerwords{
+    text-align:center;
+    font-size: 100pt;
+    color: #f7f7f7;
+    text-shadow: 0 0 4px #000000, 0 0 10px lightsteelblue;
+    font-weight: bold;
+}
+
+#banner h1:hover{
+  text-shadow: 0 0 5px #f0adb8, 0 0 10px rgb(106, 216, 106);
+  transition: 2s;
+}
+
+.nav{
+    color:#eee;
+    font: size 15pt;
+    text-shadow: 0 0 5px #f0adb8, 0 0 10px rgb(106, 216, 106);
+}
+
+nav a{
+    color:#fddddd;
+    font-size:15pt;
+    font-weight:bold;
+    flex:1;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#background{
+    color : white;
+
+}
+
+#OMerch{
+    text-align: center;
+    color: white;
+}
+
+li{
+    text-align: center;
+    
+    font-size: 15pt;
+    padding: 10px;
+    list-style-type: none;
+
+}
+
+li:a {
+    color: white;
+    text-decoration: none;
+
+}
+
+li:hover{
+    color: #f0adb8;
+    text-decoration: underline;
+    text-decoration-color: rgb(199, 255, 198);
+}
+
+hr{
+    color: pink;
+    height: 10px;
+    width: 100%;
+    margin: 20px 0;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Ghibli Characters</title>
+  <link rel="stylesheet" href="characters.css">
+  <script defer src="characters.js"></script> <!-- Important: use defer so JS runs after HTML loads -->
+</head>
+
+
+<body id = "body" >
+	<nav class="container nav">
+	<a href="index.html" class="nav"  >Home</a>
+	<a href="movies.html" class="nav" >Movies</a>
+	<a href="characters.html" class="nav" >Characters</a>
+	<a href="background.html" class="nav" >Background</a>
+	<a href="merch&media.html" class="nav" >Merch & Media</a>
+	</nav>
+
+    <div class="ccontainer">
+                <div id="banner" >
+	<h1 id = "bannerwords"> Studio Ghiblis Characters </h1>
+	</div>
+    	<p style="font-size: 0.9em; color: #555;">
+  Image © Studio Ghibli. Source: <a href="https://kottke.org/cdn-cgi/image/format=auto,fit=scale-down,width=1200,metadata=none/plus/misc/images/studio-ghibli-free-06.jpg" target="_blank">Studio Ghibli Gallery</a>
+</p>
+
+        <label for="movieSelect" style="color:white; font-size: 18pt;">Filter by Movie:</label>
+        <select id="movieSelect">
+        <option value="all">All Movies</option>
+        </select>
+
+    <div id="characters"></div>
+  </div>
+
+</body>
+
+</html>
