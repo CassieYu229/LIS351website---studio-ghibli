@@ -1,0 +1,119 @@
+body{
+  font-family: Arial;
+	z-index: 1;
+    background-color:rgb(141, 183, 141)
+	
+}
+
+.container{
+  display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30pt;
+    color: #f0f0f0;
+    text-shadow: 0 0 4px #000000, 0 0 10px rgb(255, 226, 232);
+}
+
+.ccontainer{
+    max-width: 1500px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+ 
+}
+#banner{
+  flex:1;
+  color:#d5f7d4;
+  height:600pt;
+  padding:10px;
+  justify-content:center;
+  align-items:center;
+  background-image: url('https://kottke.org/cdn-cgi/image/format=auto,fit=scale-down,width=1200,metadata=none/plus/misc/images/studio-ghibli-free-06.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+	z-index:2;
+    margin-bottom: 30px;
+}
+
+#bannerwords{
+    text-align:center;
+    font-size: 120pt;
+    color: #f7f7f7;
+    text-shadow: 0 0 4px #000000, 0 0 10px lightsteelblue;
+    font-weight: bold;
+}
+
+#banner h1:hover{
+  text-shadow: 0 0 5px #f0adb8, 0 0 10px rgb(106, 216, 106);
+  transition: 2s;
+}
+
+.nav{
+    color:#eee;
+    font: size 15pt;
+    text-shadow: 0 0 5px #f0adb8, 0 0 10px rgb(106, 216, 106);
+}
+
+nav a{
+    color:#fddddd;
+    font-size:15pt;
+    font-weight:bold;
+    flex:1;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* Flip card styles */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  float: left;
+  margin: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+#characters::after {
+  content: "";
+  display: table;
+  clear: both;
+}
