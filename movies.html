@@ -3,45 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio Ghibli Movies</title>
+  <title>Studio Ghibli | Movies</title>
+  <meta
+    name="description"
+    content="Browse Studio Ghibli films with cleaner cards, search, and polished details."
+  >
+  <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="movies.css">
-  <script defer src="script.js"></script> <!-- Important: use defer so JS runs after HTML loads -->
+  <script defer src="site.js"></script>
+  <script defer src="script.js"></script>
 </head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html">Studio Ghibli</a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="movies.html">Movies</a>
+        <a class="nav-link" href="characters.html">Characters</a>
+        <a class="nav-link" href="background.html">Background</a>
+        <a class="nav-link" href="merch&media.html">Merch &amp; Media</a>
+      </div>
+    </nav>
+  </header>
 
+  <main class="page" id="main-content">
+    <section
+      class="hero hero-compact"
+      style="--hero-image: url('https://www.ghibli.jp/gallery/howl016.jpg');"
+    >
+      <div class="hero-content" data-reveal>
+        <p class="eyebrow">Filmography</p>
+        <h1>Studio Ghibli movies</h1>
+        <p class="lede">
+          Search the collection, compare details at a glance, and read each
+          story summary in a calmer, easier-to-browse layout.
+        </p>
+      </div>
+    </section>
 
-<body id = "body" >
-	<nav class="container nav">
-	<a href="index.html" class="nav"  >Home</a>
-	<a href="movies.html" class="nav" >Movies</a>
-	<a href="characters.html" class="nav" >Characters</a>
-	<a href="background.html" class="nav" >Background</a>
-	<a href="merch&media.html" class="nav" >Merch & Media</a>
-	</nav>
+    <p class="attribution">
+      Hero image courtesy of
+      <a
+        href="https://www.ghibli.jp/works/howl/#&gid=1&pid=16"
+        target="_blank"
+        rel="noopener"
+      >
+        Studio Ghibli Gallery
+      </a>.
+    </p>
 
-        <div id="banner" >
-	<h1 id = "bannerwords"> Studio Ghiblis Movies </h1>
-	</div>
-    <p style="font-size: 0.9em; color: #555;">
-  Image © Studio Ghibli. Source: <a href="https://www.ghibli.jp/works/howl/#&gid=1&pid=16" target="_blank">Studio Ghibli Gallery</a>
-</p>
+    <section class="section-card" data-reveal>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Explore</p>
+          <h2 class="section-title">Find a film faster</h2>
+        </div>
+        <p class="result-count" id="movieCount">Loading films...</p>
+      </div>
 
-    <div class = "mcontainer">
- 
-        <div id = "movies"></div>
-    </div>
+      <label class="field" for="movieSearch">
+        <span>Search by title, director, producer, or year</span>
+        <input
+          id="movieSearch"
+          name="movieSearch"
+          type="search"
+          placeholder="Try Spirited Away, Miyazaki, 1988..."
+        >
+      </label>
+    </section>
 
+    <section id="movies" class="movie-grid" aria-live="polite"></section>
+  </main>
 
-
-
-
-    <footer>
-        <h2 style = "color: white;">Image Credits</h2>
-<ul>
-  <li style = "color: white; ">Movie posters from <a href="https://www.ghibli.jp/works/laputa/" target="_blank" rel="noopener">Studio Ghibli Official Gallery</a></li>
-</ul>
-    </footer>
-
+  <footer class="site-footer">
+    <p>
+      Poster and still references link back to the
+      <a href="https://www.ghibli.jp/" target="_blank" rel="noopener">official Studio Ghibli website</a>.
+    </p>
+    <p>&copy; <span id="current-year"></span> Studio Ghibli themed project.</p>
+  </footer>
 </body>
-
 </html>

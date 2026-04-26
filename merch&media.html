@@ -3,55 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio Ghibli Merch & Media </title>
+  <title>Studio Ghibli | Merch &amp; Media</title>
+  <meta
+    name="description"
+    content="Official Studio Ghibli merch links and helpful media-viewing notes in a cleaner, easier layout."
+  >
+  <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="merch&media.css">
+  <script defer src="site.js"></script>
 </head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html">Studio Ghibli</a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="movies.html">Movies</a>
+        <a class="nav-link" href="characters.html">Characters</a>
+        <a class="nav-link" href="background.html">Background</a>
+        <a class="nav-link" href="merch&media.html">Merch &amp; Media</a>
+      </div>
+    </nav>
+  </header>
 
+  <main class="page" id="main-content">
+    <section
+      class="hero hero-compact"
+      style="--hero-image: url('https://www.ghibli.jp/gallery/laputa049.jpg');"
+    >
+      <div class="hero-content" data-reveal>
+        <p class="eyebrow">Collect and watch</p>
+        <h1>Merch &amp; media</h1>
+        <p class="lede">
+          Official store links, a cleaner merch section, and a simple guide for
+          where to start looking when you want to watch the films.
+        </p>
+      </div>
+    </section>
 
-<body id = "body" >
-	<nav class="container nav">
-	<a href="index.html" class="nav"  >Home</a>
-	<a href="movies.html" class="nav" >Movies</a>
-	<a href="characters.html" class="nav" >Characters</a>
-	<a href="background.html" class="nav" >Background</a>
-	<a href="merch&media.html" class="nav" >Merch & Media</a>
-	</nav>
+    <p class="attribution">
+      Hero image courtesy of
+      <a href="https://www.ghibli.jp/gallery/laputa049.jpg" target="_blank" rel="noopener">
+        Studio Ghibli Gallery
+      </a>.
+    </p>
 
-    <div id="banner" >
-	<h1 id = "bannerwords"> Studio Ghiblis Merch & Media </h1>
-	</div>
- 	<p style="font-size: 0.9em; color: #555;">
-  Image © Studio Ghibli. Source: <a href="https://www.ghibli.jp/gallery/laputa049.jpg" target="_blank">Studio Ghibli Gallery</a>
-</p>
+    <section class="media-layout">
+      <article class="section-card merch-highlight" data-reveal>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Official merch</p>
+            <h2 class="section-title">Shopping links collected in one place</h2>
+          </div>
+        </div>
 
-    <div id = "merch">
-        <h2 id = "OMerch"> Official Merch</h2>
-	    <img src = "officialmerchstudioghibli.png" alt = "Official Studio Ghibli Merchandise Image" style = "width: 100%; height: auto;">
-            <ol>
-                <li><a href="https://www.ghibli-museum-shop.jp/" style = "color: white; text-decoration: none;" "target="_blank">The online shop for the Ghibli Museum in Mitaka has opened. Original goods that can only be purchased here are now available!</a></li>
-                <li><a href="https://www.maison-ghibli.com/en/" style = "color: white; text-decoration: none;" target="_blank">Official Studio Ghibli merchandise store in Europe.</a></li>
-                <li><a href="https://shop.bandai.com/studioghibli" style = "color: white; text-decoration: none;" target="_blank">A shopping site for Ghibli goods operated in North America</a></li>
-                <li><a href="http://www.dotorisup.com/" style = "color: white; text-decoration: none;" target="_blank">A shopping site for Ghibli goods operated in Korea</a></li>
-                <li><a href="http://c.tkma.co.jp/tjc/ghibli_records/" style = "color: white; text-decoration: none;" target="_blank">Studio Ghibli Records (Tokuma Japan Communications)</a></li>
-            </ol>
-    </div>
+        <img
+          class="merch-image"
+          src="officialmerchstudioghibli.png"
+          alt="Official Studio Ghibli merchandise collage"
+          loading="lazy"
+        >
 
-<hr> 
+        <ul class="resource-list">
+          <li>
+            <a href="https://www.ghibli-museum-shop.jp/" target="_blank" rel="noopener">
+              Ghibli Museum Shop
+            </a>
+            Original goods connected to the Ghibli Museum in Mitaka.
+          </li>
+          <li>
+            <a href="https://www.maison-ghibli.com/en/" target="_blank" rel="noopener">
+              Maison Ghibli
+            </a>
+            Official Studio Ghibli merchandise store for Europe.
+          </li>
+          <li>
+            <a href="https://shop.bandai.com/studioghibli" target="_blank" rel="noopener">
+              Bandai Studio Ghibli collection
+            </a>
+            North American shopping destination for licensed products.
+          </li>
+          <li>
+            <a href="http://www.dotorisup.com/" target="_blank" rel="noopener">
+              Dotori Sup
+            </a>
+            Korea-based Ghibli goods shop.
+          </li>
+          <li>
+            <a href="http://c.tkma.co.jp/tjc/ghibli_records/" target="_blank" rel="noopener">
+              Studio Ghibli Records
+            </a>
+            Music and soundtrack-related releases.
+          </li>
+        </ul>
+      </article>
 
-    <div id = "wtw">
-        <h2 id = "WhereToW" style = "color: white; text-align: center;"> Where to Watch Studio Ghibli Movies</h2>
-            <p style = "text-align: center; color: white; ">Studio Ghibli movies are available on various streaming platforms. Here are some options:</p>
-            <ul>
-                <li><a href="https://www.netflix.com/" style = "color: white; text-decoration: none;" target="_blank">Netflix - Many Studio Ghibli films are available for streaming.</a></li>
-                <li><a href="https://www.hbo.com/" style = "color: white; text-decoration: none;" target="_blank">HBO Max - Offers a selection of Ghibli films.</a> </li>
-                <li><a href="https://www.amazon.com/" style = "color: white; text-decoration: none;" target="_blank">Amazon Prime Video - Some Ghibli films can be rented or purchased.</a> </li>
-            </ul>
-        </h2>
-    </div>
+      <article class="section-card viewing-card" data-reveal>
+        <p class="eyebrow">Watching guide</p>
+        <h2 class="section-title">Where to start looking for the films</h2>
+        <p class="section-copy">
+          Availability changes over time and can vary by country, so it helps to
+          check the most common streaming and digital storefronts first.
+        </p>
 
+        <div class="watch-grid">
+          <div class="watch-item">
+            <h3>Streaming services</h3>
+            <p>Check major subscription platforms that carry premium film libraries.</p>
+          </div>
+          <div class="watch-item">
+            <h3>Digital rentals</h3>
+            <p>Rental and purchase storefronts are often the fastest fallback option.</p>
+          </div>
+          <div class="watch-item">
+            <h3>Physical editions</h3>
+            <p>Blu-ray and DVD releases are a reliable choice for collectors and repeat watching.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
 
-
+  <footer class="site-footer">
+    <p>Merch links point to official or distributor-managed destinations.</p>
+    <p>&copy; <span id="current-year"></span> Studio Ghibli themed project.</p>
+  </footer>
 </body>
-
 </html>

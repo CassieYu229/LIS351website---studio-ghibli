@@ -3,37 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio Ghibli Characters</title>
+  <title>Studio Ghibli | Characters</title>
+  <meta
+    name="description"
+    content="Filter and browse Studio Ghibli characters with a cleaner, more usable layout."
+  >
+  <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="characters.css">
-  <script defer src="characters.js"></script> <!-- Important: use defer so JS runs after HTML loads -->
+  <script defer src="site.js"></script>
+  <script defer src="characters.js"></script>
 </head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html">Studio Ghibli</a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="movies.html">Movies</a>
+        <a class="nav-link" href="characters.html">Characters</a>
+        <a class="nav-link" href="background.html">Background</a>
+        <a class="nav-link" href="merch&media.html">Merch &amp; Media</a>
+      </div>
+    </nav>
+  </header>
 
-<body id = "body" >
-	<nav class="container nav">
-	<a href="index.html" class="nav"  >Home</a>
-	<a href="movies.html" class="nav" >Movies</a>
-	<a href="characters.html" class="nav" >Characters</a>
-	<a href="background.html" class="nav" >Background</a>
-	<a href="merch&media.html" class="nav" >Merch & Media</a>
-	</nav>
+  <main class="page" id="main-content">
+    <section
+      class="hero hero-compact"
+      style="--hero-image: url('https://kottke.org/cdn-cgi/image/format=auto,fit=scale-down,width=1200,metadata=none/plus/misc/images/studio-ghibli-free-06.jpg');"
+    >
+      <div class="hero-content" data-reveal>
+        <p class="eyebrow">Faces and favorites</p>
+        <h1>Studio Ghibli characters</h1>
+        <p class="lede">
+          Filter by film, search by name, and browse character details without
+          relying on hover-only interactions.
+        </p>
+      </div>
+    </section>
 
-    <div class="ccontainer">
-                <div id="banner" >
-	<h1 id = "bannerwords"> Studio Ghiblis Characters </h1>
-	</div>
-    	<p style="font-size: 0.9em; color: #555;">
-  Image © Studio Ghibli. Source: <a href="https://kottke.org/cdn-cgi/image/format=auto,fit=scale-down,width=1200,metadata=none/plus/misc/images/studio-ghibli-free-06.jpg" target="_blank">Studio Ghibli Gallery</a>
-</p>
+    <p class="attribution">
+      Hero image courtesy of
+      <a
+        href="https://kottke.org/cdn-cgi/image/format=auto,fit=scale-down,width=1200,metadata=none/plus/misc/images/studio-ghibli-free-06.jpg"
+        target="_blank"
+        rel="noopener"
+      >
+        Studio Ghibli image collection
+      </a>.
+    </p>
 
-        <label for="movieSelect" style="color:white; font-size: 18pt;">Filter by Movie:</label>
-        <select id="movieSelect">
-        <option value="all">All Movies</option>
-        </select>
+    <section class="section-card" data-reveal>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Filter tools</p>
+          <h2 class="section-title">Search the cast list</h2>
+        </div>
+        <p class="result-count" id="characterCount">Loading characters...</p>
+      </div>
 
-    <div id="characters"></div>
-  </div>
+      <div class="control-bar">
+        <label class="field" for="movieSelect">
+          <span>Filter by movie</span>
+          <select id="movieSelect" name="movieSelect">
+            <option value="all">All movies</option>
+          </select>
+        </label>
 
+        <label class="field" for="characterSearch">
+          <span>Search by character name</span>
+          <input
+            id="characterSearch"
+            name="characterSearch"
+            type="search"
+            placeholder="Try Totoro, Sophie, Ponyo..."
+          >
+        </label>
+      </div>
+    </section>
+
+    <section id="characters" class="character-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Character details are loaded dynamically from the Ghibli API.</p>
+    <p>&copy; <span id="current-year"></span> Studio Ghibli themed project.</p>
+  </footer>
 </body>
-
 </html>

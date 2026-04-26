@@ -1,85 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale = 1.0">
-<title>Studio Ghibli Home Page</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="index.css">
-<script src=""></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Ghibli | Home</title>
+  <meta
+    name="description"
+    content="A warm, easy-to-explore Studio Ghibli fan site featuring films, characters, history, and official merch links."
+  >
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="index.css">
+  <script defer src="site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<body id = "body" >
-	<nav class="container" class="nav">
-	<a href="index.html" class="nav" >Home</a>
-	<a href="movies.html"  class="nav">Movies</a>
-	<a href="characters.html"  class="nav">Characters</a>
-	<a href="background.html" class="nav">Background</a>
-	<a href="merch&media.html" class="nav">Merch & Media</a>
-	</nav>
-
-	<div id="banner" >
-	<h1 id = "bannerwords"> Welcome to the World of Studio Ghibli </h1>
-	</div>
-	<p style="font-size: 0.9em; color: #555;">
-  Image © Studio Ghibli. Source: <a href="https://www.ghibli.jp/works/chihiro/" target="_blank">Studio Ghibli Gallery</a>
-</p>
-
-    <div class="wrapper">
-      <div class="cols">
-			
-				<div class="col" ontouchstart="this.classList.toggle('hover');">
-				  <div class="card">
-					  <div class="front" style = "background-image: url(https://www.ghibli.jp/gallery/thumb-ponyo006.png)" >
-						  <div class="inner">
-						  	<p>Movies</p>
-								<br>
-								<p> Come see all the movies that the Studio Ghibli has animated! </p>
-					   	</div>
-					  </div>
-          
-					  <div class="back" style = "background-image: url(https://www.ghibli.jp/gallery/thumb-ponyo006.png)">
-						  
-					  </div>
-			  	</div>
-					 Image © Studio Ghibli. Source: <a href="https://www.ghibli.jp/works/ponyo/" target="_blank">Studio Ghibli Gallery</a>
-				</div>
-
-				<div class="col" ontouchstart="this.classList.toggle('hover');">
-				  <div class="card">
-					  <div class="front" style=" background-image: url(https://www.ghibli.jp/gallery/thumb-chihiro006.png)">
-						  <div class="inner">
-						  	<p>Characters</p>
-								<br>
-								<p>Look at all the characters Studio Ghibli has created thus far!</p>
-					   	</div>
-					  </div>
-          
-					  <div class="back" style = "background-image: url(https://www.ghibli.jp/gallery/thumb-chihiro006.png)">
-						  
-					  </div>
-				  </div>
-				   Image © Studio Ghibli. Source: <a href="https://www.ghibli.jp/works/chihiro/" target="_blank">Studio Ghibli Gallery</a>
-				</div>
-
-				<div class="col" ontouchstart="this.classList.toggle('hover');">
-				  <div class="card">
-					  <div class="front" style="background-image: url(https://www.ghibli.jp/gallery/thumb-chihiro015.png)">
-						  <div class="inner">
-						  	<p>Merch & Media</p>
-								<br>
-							<p>Come see all the Merchandise and Media that have are available!</p>
-					   	</div>
-					  </div>
-          
-					  <div class="back" style = "background-image: url(https://www.ghibli.jp/gallery/thumb-chihiro015.png)">
-						
-					  </div>
-				  </div>
-				   Image © Studio Ghibli. Source: <a href="https://www.ghibli.jp/works/chihiro/" target="_blank">Studio Ghibli Gallery</a>
-				</div>
-				
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html">Studio Ghibli</a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="movies.html">Movies</a>
+        <a class="nav-link" href="characters.html">Characters</a>
+        <a class="nav-link" href="background.html">Background</a>
+        <a class="nav-link" href="merch&media.html">Merch &amp; Media</a>
       </div>
-		</div>
+    </nav>
+  </header>
 
+  <main class="page" id="main-content">
+    <section
+      class="hero"
+      style="--hero-image: url('https://www.ghibli.jp/gallery/chihiro041.jpg');"
+    >
+      <div class="hero-content" data-reveal>
+        <p class="eyebrow">Hand-drawn wonder</p>
+        <h1>Welcome to the world of Studio Ghibli.</h1>
+        <p class="lede">
+          Wander through beloved films, memorable characters, studio history,
+          and places to keep exploring the Ghibli universe.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button-link" href="movies.html">Browse Movies</a>
+          <a class="button-link secondary" href="characters.html">Meet Characters</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="attribution">
+      Hero image courtesy of
+      <a href="https://www.ghibli.jp/works/chihiro/" target="_blank" rel="noopener">
+        Studio Ghibli Gallery
+      </a>.
+    </p>
+
+    <section class="feature-grid" aria-label="Explore the site">
+      <a class="feature-card" href="movies.html" data-reveal>
+        <span class="feature-tag">Movies</span>
+        <h2>Browse the film collection</h2>
+        <p>
+          Search titles, scan key details quickly, and jump between stories
+          without the old wall-of-text feeling.
+        </p>
+      </a>
+
+      <a class="feature-card" href="characters.html" data-reveal>
+        <span class="feature-tag">Characters</span>
+        <h2>Find favorites by film</h2>
+        <p>
+          Filter the cast list by movie and use a quick search to reach the
+          characters you want faster.
+        </p>
+      </a>
+
+      <a class="feature-card" href="background.html" data-reveal>
+        <span class="feature-tag">Background</span>
+        <h2>Read the studio story</h2>
+        <p>
+          Learn how the studio began, what defines its style, and why its work
+          still resonates around the world.
+        </p>
+      </a>
+
+      <a class="feature-card" href="merch&media.html" data-reveal>
+        <span class="feature-tag">Merch &amp; Media</span>
+        <h2>Keep exploring beyond the films</h2>
+        <p>
+          Browse official shopping links, find viewing options, and use the
+          helpful notes collected in one place.
+        </p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Studio Ghibli fan site refresh.</p>
+    <p>&copy; <span id="current-year"></span> Studio Ghibli themed project.</p>
+  </footer>
 </body>
-
 </html>
